@@ -9,7 +9,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "EMPLOYEE")
-public class EmployeeEntity {
+class EmployeeEntity {
 
     @Id
     @GeneratedValue

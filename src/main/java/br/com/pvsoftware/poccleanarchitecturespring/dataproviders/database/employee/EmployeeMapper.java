@@ -5,7 +5,7 @@ import java.util.Set;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface EmployeeMapper {
+interface EmployeeMapper {
 
     Set<EmployeeEntity> toEntitySet(Set<Employee> employees);
 }

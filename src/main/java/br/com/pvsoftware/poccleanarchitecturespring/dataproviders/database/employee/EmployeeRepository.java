@@ -2,5 +2,5 @@ package br.com.pvsoftware.poccleanarchitecturespring.dataproviders.database.empl
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface EmployeeRepository extends CrudRepository<EmployeeEntity, Integer> {
+interface EmployeeRepository extends CrudRepository<EmployeeEntity, Integer> {
 }

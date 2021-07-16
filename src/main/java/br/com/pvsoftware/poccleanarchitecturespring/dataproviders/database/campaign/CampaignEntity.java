@@ -13,7 +13,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "CAMPAIGN")
-public class CampaignEntity {
+class CampaignEntity {
 
     @Id
     @GeneratedValue

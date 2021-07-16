@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class EmployeeDatabaseProvider implements RegisterEmployees {
+class EmployeeDatabaseProvider implements RegisterEmployees {
 
     private final EmployeeRepository employeeRepository;
     private final EmployeeMapper employeeMapper;

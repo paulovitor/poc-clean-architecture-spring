@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class CampaignDatabaseProvider implements ListCampaigns, RegisterCampaign, DoesCampaignExist {
+class CampaignDatabaseProvider implements ListCampaigns, RegisterCampaign, DoesCampaignExist {
 
     private final CampaignRepository campaignRepository;
     private final CampaignMapper mapper;

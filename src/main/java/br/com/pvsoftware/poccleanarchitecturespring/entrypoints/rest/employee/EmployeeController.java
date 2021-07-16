@@ -10,13 +10,13 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequiredArgsConstructor
-public class EmployeeController {
+class EmployeeController {
 
     private final ImportEmployeesUseCase importEmployeesUseCase;
     private final EmployeesFileReader employeesFileReader;
 
     @PostMapping("/employees/file")
-    public ResponseEntity<Void> importEmployees(final MultipartFile file) {
+    ResponseEntity<Void> importEmployees(final MultipartFile file) {
         Set<EmployeeDTO> employees = employeesFileReader.read(file);
         importEmployeesUseCase.importEmployees(employees);
         return ResponseEntity.noContent().build();

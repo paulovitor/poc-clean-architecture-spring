@@ -2,7 +2,7 @@ package br.com.pvsoftware.poccleanarchitecturespring.dataproviders.database.camp
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface CampaignRepository extends PagingAndSortingRepository<CampaignEntity, Integer> {
+interface CampaignRepository extends PagingAndSortingRepository<CampaignEntity, Integer> {
 
     boolean existsByName(String name);
 }

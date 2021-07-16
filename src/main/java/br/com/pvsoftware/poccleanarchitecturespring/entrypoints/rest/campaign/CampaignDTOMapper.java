@@ -4,7 +4,7 @@ import br.com.pvsoftware.poccleanarchitecturespring.domain.entity.Campaign;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface CampaignDTOMapper {
+interface CampaignDTOMapper {
 
     CampaignDTO toDTO(Campaign campaign);
 }

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 @Component
-public class EmployeesCsvFileReader implements EmployeesFileReader {
+class EmployeesCsvFileReader implements EmployeesFileReader {
 
     @Override
     public Set<EmployeeDTO> read(final MultipartFile file) {

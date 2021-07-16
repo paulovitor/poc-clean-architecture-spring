@@ -13,20 +13,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-public class CampaignController {
+class CampaignController {
 
     private final RegisterCampaignUseCase registerCampaignUseCase;
     private final ListCampaignsUseCase listCampaignsUseCase;
     private final CampaignDTOMapper campaignDTOMapper;
 
     @GetMapping("/campaigns")
-    public ResponseEntity<List<CampaignDTO>> listCampaigns() {
+    ResponseEntity<List<CampaignDTO>> listCampaigns() {
         val campaigns = listCampaignsUseCase.listAll();
         return ResponseEntity.ok(campaigns.map(it -> campaignDTOMapper.toDTO(it)).toList());
     }
 
     @PostMapping("/campaigns")
-    public ResponseEntity<Void> registerCampaign(@Valid final CampaignDTO campaignDTO) {
+    ResponseEntity<Void> registerCampaign(@Valid final CampaignDTO campaignDTO) {
         registerCampaignUseCase.registerCampaign(campaignDTO);
         return ResponseEntity.noContent().build();
     }
